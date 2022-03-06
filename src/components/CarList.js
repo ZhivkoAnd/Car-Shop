@@ -1,7 +1,7 @@
 const carList = [
   {
     id: 1,
-    brand: "Hamburger",
+    name: "Hamburger",
     category: "Hamburgers",
     price: 8,
     image:

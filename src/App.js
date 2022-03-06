@@ -1,21 +1,23 @@
 import "./App.css";
+import carList from "./components/CarList";
+import React, { useState } from "react";
+import CarGrid from "./components/CarGrid";
 
 function App() {
+  const [carData, setCarData] = useState(carList);
+
+  const filterCarCategories = (category) => {
+    if (category === "all") {
+      setCarData(carList);
+      return;
+    }
+    const filteredCars = carList.filter((item) => item.category === category);
+    setCarData(filteredCars);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CarGrid cars={carData} filterCarCategories={filterCarCategories} />
     </div>
   );
 }
