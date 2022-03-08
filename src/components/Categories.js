@@ -3,10 +3,10 @@ import carList from './CarList'
 
 const Categories = ({filterCarCategories}) => {
 
-    const uniqueCategories = new Set(['all', ...carList])
+    const uniqueCategories = ['all', ...new Set(carList.map((car)=>(<button key = {car.category} onClick={() => filterCarCategories(car.category)}>{car.category}</button>)))]
 
   return (
-    <div>{uniqueCategories.map((car)=>(<button key = {car.category} onClick={() => filterCarCategories(car.category)}>{car.category}</button>))}</div>
+    <div>{uniqueCategories}</div>
   )
 }
 
