@@ -3,6 +3,7 @@ import carList from "../components/CarList";
 import CarGrid from "../components/CarGrid";
 import NavMenu from "../components/UI/NavMenu";
 import Footer from "../components/UI/Footer";
+import Title from "../components/UI/Title";
 import { motion } from "framer-motion";
 import styled from "styled-components";
 import Background_PC_208 from "../Media/Background_PC_208.jpg";
@@ -25,6 +26,7 @@ const Home = () => {
   return (
     <BackgroundContainer>
       <NavMenu filterCarCategories={filterCarCategories} />
+      <Title />
       <CarGrid cars={carData} />
       <Footer />
     </BackgroundContainer>

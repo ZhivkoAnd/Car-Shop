@@ -1,16 +1,15 @@
-import React from 'react'
-import styled from 'styled-components'
-import Categories from '../Categories'
+import React from "react";
+import styled from "styled-components";
+import Categories from "../Categories";
 
-const NavMenu = ({filterCarCategories}) => {
+const NavMenu = ({ filterCarCategories }) => {
   return (
     <NavWrapper>
-        <Categories filterCarCategories = {filterCarCategories}/>
+      <Categories filterCarCategories={filterCarCategories} />
     </NavWrapper>
-  )
-}
+  );
+};
 
-export default NavMenu
+export default NavMenu;
 
-
-const NavWrapper = styled.div``
+const NavWrapper = styled.div``;

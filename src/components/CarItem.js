@@ -7,7 +7,7 @@ function CarItem({ car }) {
         <div>{car.name}</div>
         <div>{car.category}</div>
         <div>{car.price}</div>
-        <img src={car.image} alt="car" />
+        {/* <img src={car.image} alt="car" /> */}
       </header>
     </div>
   );
