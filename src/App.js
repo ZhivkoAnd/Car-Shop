@@ -1,29 +1,13 @@
-import "./App.css";
-import carList from "./components/CarList";
-import React, { useState } from "react";
-import CarGrid from "./components/CarGrid";
-import NavMenu from "./components/UI/NavMenu";
-// import { useCarContext } from "./components/CarContext";
+import React from "react";
+import Home from "./Pages/Home";
+import "./Styles/styles.css";
 
-function App() {
-  const [carData, setCarData] = useState(carList);
-  // const { counter, increaseCount } = useCarContext();
-
-  const filterCarCategories = (category) => {
-    if (category === "all") {
-      setCarData(carList);
-      return;
-    }
-    const filteredCars = carList.filter((item) => item.category === category);
-    setCarData(filteredCars);
-  };
-
+const App = () => {
   return (
     <div className="App">
-      <NavMenu filterCarCategories={filterCarCategories}/>
-      <CarGrid cars={carData} />
+      <Home />
     </div>
   );
-}
+};
 
 export default App;

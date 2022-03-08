@@ -1,13 +1,22 @@
-import React from 'react'
-import carList from './CarList'
+import React from "react";
+import carList from "./CarList";
 
-const Categories = ({filterCarCategories}) => {
+const Categories = ({ filterCarCategories }) => {
+  const uniqueCategories = [
+    "all",
+    ...new Set(
+      carList.map((car) => (
+        <button
+          key={car.category}
+          onClick={() => filterCarCategories(car.category)}
+        >
+          {car.category}
+        </button>
+      ))
+    ),
+  ];
 
-    const uniqueCategories = ['all', ...new Set(carList.map((car)=>(<button key = {car.category} onClick={() => filterCarCategories(car.category)}>{car.category}</button>)))]
+  return <div>{uniqueCategories}</div>;
+};
 
-  return (
-    <div>{uniqueCategories}</div>
-  )
-}
-
-export default Categories
+export default Categories;
