@@ -2,8 +2,11 @@ import React from 'react'
 import carList from './CarList'
 
 const Categories = ({filterCarCategories}) => {
+
+    const uniqueCategories = new Set(['all', ...carList])
+
   return (
-    <div>{carList.map((car)=>(<div onClick={filterCarCategories}>{car.category}</div>))}</div>
+    <div>{uniqueCategories.map((car)=>(<button key = {car.category} onClick={() => filterCarCategories(car.category)}>{car.category}</button>))}</div>
   )
 }
 

@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavMenu cars = {carData} filterCarCategories={filterCarCategories}/>
+      <NavMenu filterCarCategories={filterCarCategories}/>
       <CarGrid cars={carData} />
     </div>
   );

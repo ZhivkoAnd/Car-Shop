@@ -6,14 +6,6 @@ const NavMenu = ({filterCarCategories}) => {
   return (
     <NavWrapper>
         <Categories filterCarCategories = {filterCarCategories}/>
-        <ul>
-            <li>
-                hey
-            </li>
-            <li>
-                hey
-            </li>
-        </ul>
     </NavWrapper>
   )
 }
