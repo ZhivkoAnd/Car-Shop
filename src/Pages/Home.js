@@ -4,33 +4,19 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import Background_PC_208 from "../Media/Background_PC_208.jpg";
 import Background_Mobile_208 from "../Media/Background_PC_208.jpg";
-import ExploreButton from '../components/UI/ExploreButton'
+import ExploreButton from "../components/UI/ExploreButton";
 import Subtitle from "../components/UI/Subtitle";
+import BackgroundVideo from "../components/UI/BackgroundVideo";
 
 const Home = () => {
-
   return (
-    <BackgroundContainer>
+    <>
+      <BackgroundVideo />
       <Title />
-      <Subtitle/>
-      <ExploreButton/>
-    </BackgroundContainer>
+      <Subtitle />
+      <ExploreButton />
+    </>
   );
 };
 
 export default Home;
-
-const BackgroundContainer = styled.div`
-  margin: 0px;
-  background-repeat: no-repeat fixed;
-  background-color: black;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-  transition: 0.5s;
-  background-size: cover;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  background-image: url(${Background_PC_208});
-`;
