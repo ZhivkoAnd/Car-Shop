@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import Categories from "../Categories";
+import Categories from "../FilterBrands";
 
-const NavMenu = ({ filterCarCategories }) => {
+const NavMenu = ({ filterCarBrands }) => {
   return (
     <NavWrapper>
-      <Categories filterCarCategories={filterCarCategories} />
+      <Categories filterCarBrands={filterCarBrands} />
     </NavWrapper>
   );
 };

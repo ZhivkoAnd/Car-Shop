@@ -14,18 +14,18 @@ const Home = () => {
   const [carData, setCarData] = useState(carList);
   // const { counter, increaseCount } = useCarContext();
 
-  const filterCarCategories = (category) => {
-    if (category === "all") {
+  const filterCarBrands = (brand) => {
+    if (brand === "All") {
       setCarData(carList);
       return;
     }
-    const filteredCars = carList.filter((item) => item.category === category);
-    setCarData(filteredCars);
+    const filteredCarsBrand = carList.filter((car) => car.brand === brand);
+    setCarData(filteredCarsBrand);
   };
 
   return (
     <BackgroundContainer>
-      <NavMenu filterCarCategories={filterCarCategories} />
+      <NavMenu filterCarBrands={filterCarBrands} />
       <Title />
       <CarGrid cars={carData} />
       <Footer />

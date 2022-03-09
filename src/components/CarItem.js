@@ -5,7 +5,7 @@ function CarItem({ car }) {
     <div className="App">
       <header className="App-header">
         <div>{car.name}</div>
-        <div>{car.category}</div>
+        <div>{car.brand}</div>
         <div>{car.price}</div>
         {/* <img src={car.image} alt="car" /> */}
       </header>
