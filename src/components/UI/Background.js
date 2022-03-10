@@ -14,7 +14,6 @@ const BackgroundContainer = styled.div`
   width: 100vw;
   height: 100vh;
   background-size: cover;
-  z-index: 3;
   text-align: center;
   display: flex;
   -webkit-box-pack: center;
