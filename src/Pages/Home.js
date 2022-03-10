@@ -10,12 +10,16 @@ import BackgroundVideo from "../components/UI/BackgroundVideo";
 
 const Home = () => {
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
       <BackgroundVideo />
       <Title />
       <Subtitle />
       <ExploreButton />
-    </>
+    </motion.div>
   );
 };
 

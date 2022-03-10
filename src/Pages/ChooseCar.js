@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import Background_PC_208 from "../Media/Background_PC_208.jpg";
 import Background_Mobile_208 from "../Media/Background_PC_208.jpg";
+import BackButton from "../components/UI/BackButton";
 // import { useCarContext } from "./components/CarContext";
 
 const ChooseCar = () => {
@@ -33,12 +34,18 @@ const ChooseCar = () => {
   };
 
   return (
-    <BackgroundContainer>
-      <NavMenu filterCarBrand={filterCarBrand} filterCarType={filterCarType}/>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <BackgroundContainer />
+      <NavMenu filterCarBrand={filterCarBrand} filterCarType={filterCarType} />
       <Title />
+      <BackButton />
       <CarGrid cars={carData} />
       <Footer />
-    </BackgroundContainer>
+    </motion.div>
   );
 };
 
@@ -56,6 +63,6 @@ const BackgroundContainer = styled.div`
   text-align: center;
   display: flex;
   background-image: url(${Background_PC_208});
-  flex-direction:column;
-  align-items:center;
+  flex-direction: column;
+  align-items: center;
 `;

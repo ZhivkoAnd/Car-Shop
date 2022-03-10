@@ -2,12 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import CarContextProvider from "./components/CarContext";
+import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <CarContextProvider>
+  <BrowserRouter>
     <React.StrictMode>
-      <App />
+      <CarContextProvider>
+        <App />
+      </CarContextProvider>
     </React.StrictMode>
-  </CarContextProvider>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
