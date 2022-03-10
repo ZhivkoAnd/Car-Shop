@@ -4,11 +4,9 @@ import { Link } from "react-router-dom";
 
 const ExploreButton = () => {
   return (
-    <div className="container">
-      <Link to="/ChooseCar">
-        <ExploreButtonWrapper>Explore</ExploreButtonWrapper>
-      </Link>
-    </div>
+    <Link to="/ChooseCar">
+      <ExploreButtonWrapper>Explore</ExploreButtonWrapper>
+    </Link>
   );
 };
 

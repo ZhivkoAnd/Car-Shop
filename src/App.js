@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Loading from "./components/UI/Loading";
 import "./Styles/styles.css";
+import { AnimatePresence } from "framer-motion";
 
 const Home = React.lazy(() => import("./Pages/Home"));
 const ChooseCar = React.lazy(() => import("./Pages/ChooseCar"));
