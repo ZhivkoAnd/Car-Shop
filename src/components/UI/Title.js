@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-const Title = ({ title }) => {
+const Title = ({ title, subtitle }) => {
   return (
     <motion.div
       initial={{ y: -50, opacity: 0 }}
@@ -10,6 +10,7 @@ const Title = ({ title }) => {
       transition={{ duration: 0.5 }}
     >
       <TitleWrapper>{title}</TitleWrapper>
+      <SubtitleWrapper>{subtitle}</SubtitleWrapper>
     </motion.div>
   );
 };
@@ -17,8 +18,12 @@ const Title = ({ title }) => {
 export default Title;
 
 const TitleWrapper = styled.div`
-  margin-top: 5rem;
   font-size: 6rem;
   font-family: "Italianno", cursive;
+  letter-spacing: 4px;
+`;
+
+const SubtitleWrapper = styled.div`
+  font-size: 2rem;
   letter-spacing: 4px;
 `;

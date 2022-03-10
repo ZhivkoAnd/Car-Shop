@@ -13,6 +13,21 @@ code {
     monospace;
 }
 
-.App-link {
-  color: #61dafb;
+.justified {
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  height: 278px;
+  width: 185px;
+  cursor: pointer;
+  margin-bottom: 15px;
 }
