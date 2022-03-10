@@ -9,6 +9,7 @@ import styled from "styled-components";
 import Background_PC_208 from "../Media/Background_PC_208.jpg";
 import Background_Mobile_208 from "../Media/Background_PC_208.jpg";
 import BackButton from "../components/UI/BackButton";
+import Background from "../components/UI/Background";
 // import { useCarContext } from "./components/CarContext";
 
 const ChooseCar = () => {
@@ -39,30 +40,18 @@ const ChooseCar = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <BackgroundContainer />
-      <NavMenu filterCarBrand={filterCarBrand} filterCarType={filterCarType} />
-      <Title />
-      <BackButton />
-      <CarGrid cars={carData} />
-      <Footer />
+      <Background>
+        <NavMenu
+          filterCarBrand={filterCarBrand}
+          filterCarType={filterCarType}
+        />
+        <Title />
+        <BackButton />
+        <CarGrid cars={carData} />
+        <Footer />
+      </Background>
     </motion.div>
   );
 };
 
 export default ChooseCar;
-
-const BackgroundContainer = styled.div`
-  margin: 0px;
-  background-repeat: no-repeat fixed;
-  background-color: black;
-  background-position: center;
-  width: 100vw;
-  height: 100vh;
-  transition: 0.5s;
-  background-size: cover;
-  text-align: center;
-  display: flex;
-  background-image: url(${Background_PC_208});
-  flex-direction: column;
-  align-items: center;
-`;

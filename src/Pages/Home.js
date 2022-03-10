@@ -6,7 +6,7 @@ import Background_PC_208 from "../Media/Background_PC_208.jpg";
 import Background_Mobile_208 from "../Media/Background_PC_208.jpg";
 import ExploreButton from "../components/UI/ExploreButton";
 import Subtitle from "../components/UI/Subtitle";
-import BackgroundVideo from "../components/UI/BackgroundVideo";
+import Background from "../components/UI/Background";
 
 const Home = () => {
   return (
@@ -15,7 +15,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <BackgroundVideo />
+      <Background />
       <Title />
       <Subtitle />
       <ExploreButton />

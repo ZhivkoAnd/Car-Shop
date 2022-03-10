@@ -8,6 +8,12 @@ const Subtitle = () => {
 export default Subtitle;
 
 const SubtitleWrapper = styled.div`
-  z-index: 1;
-  margin-top: 15rem;
+  z-index: 10;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-top: 12rem;
+  font-family: "TESLA";
+  display: flex;
+  justify-content: center;
 `;
