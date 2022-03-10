@@ -7,13 +7,13 @@ const Background = ({ children }) => {
 };
 
 const BackgroundContainer = styled.div`
-  position: absolute;
-  left: 0;
-  right: 0;
+  background-color: black;
   background-position: center center;
   width: 100vw;
   height: 100vh;
+  transition: all 0.5s ease 0s;
   background-size: cover;
+  z-index: 3;
   text-align: center;
   display: flex;
   -webkit-box-pack: center;
