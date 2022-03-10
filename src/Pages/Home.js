@@ -12,7 +12,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
     >
       <Background>
-        <Title title="Luxury" subtitle="Welcome" />
+        <Title title="Luxury Cars" />
         <ExploreButton button="Explore" />
       </Background>
     </motion.div>
