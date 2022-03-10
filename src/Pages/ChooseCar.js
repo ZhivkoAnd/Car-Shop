@@ -55,6 +55,7 @@ const BackgroundContainer = styled.div`
   background-size: cover;
   text-align: center;
   display: flex;
-  justify-content: center;
   background-image: url(${Background_PC_208});
+  flex-direction:column;
+  align-items:center;
 `;
