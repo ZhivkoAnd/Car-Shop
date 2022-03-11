@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Background_PC_208 from "../../Media/Background_PC_208.jpg";
+import BackgroundImage from "../../Media/Background.jpg";
 
 const Background = ({ children }) => {
   return (
@@ -18,7 +18,12 @@ const BackgroundContainer = styled.div`
   text-align: center;
   -webkit-box-pack: center;
   justify-content: center;
-  background-image: url(${Background_PC_208});
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.1)
+    ),
+    url(${BackgroundImage});
   flex-direction: column;
 `;
 

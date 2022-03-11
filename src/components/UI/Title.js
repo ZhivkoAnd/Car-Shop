@@ -21,6 +21,7 @@ const TitleWrapper = styled.div`
   font-size: 6rem;
   font-family: "Italianno", cursive;
   letter-spacing: 4px;
+  color: white;
 `;
 
 const SubtitleWrapper = styled.div`
