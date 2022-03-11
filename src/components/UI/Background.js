@@ -3,11 +3,7 @@ import styled from "styled-components";
 import BackgroundImage from "../../Media/Background.jpg";
 
 const Background = ({ children }) => {
-  return (
-    <BackgroundContainer>
-      <div className="container justified">{children}</div>
-    </BackgroundContainer>
-  );
+  return <BackgroundContainer>{children}</BackgroundContainer>;
 };
 
 const BackgroundContainer = styled.div`
